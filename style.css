@@ -48,25 +48,27 @@ footer a img:hover {
 .banner {
     position: relative;
     width: 100%;
-    height: 200px; /* Adjust height as needed */
+    height: 200px; /* Adjust as needed */
     display: flex;
-    justify-content: center; /* Centers the logo */
     align-items: center;
-    overflow: hidden; /* Prevents overflow */
+    overflow: hidden;
 }
 
 .cover {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image fits properly */
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* Cover image stays in the background */
+    z-index: 1; /* Cover image stays behind */
 }
 
 .logo {
-    width: 150px; /* Adjust logo size */
+    width: 80px; /* Adjust size */
     position: relative;
-    z-index: 2; /* Logo appears in front */
+    margin-left: 20px; /* Moves logo to the left */
+    z-index: 2; /* Logo stays in front */
+    border-radius: 50%; /* Makes it circular like YouTube */
+    border: 3px solid white; /* Optional: Adds a white border */
 }
