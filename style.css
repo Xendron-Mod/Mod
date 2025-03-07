@@ -1,55 +1,22 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Header */
-header {
-    background-color: #007BFF;
-    color: white;
-    padding: 20px;
-    font-size: 24px;
+body {
+    text-align: center;
+    background-color: #f9f9f9;
 }
 
-/* Main Content */
-.video-section {
-    margin: 20px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-        padding: 10px;
-    }
-    
-    iframe {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16/9;
-    }
-}
-footer {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f8f8f8;
-}
-
-footer a img {
-    transition: transform 0.3s ease-in-out;
-}
-
-footer a img:hover {
-    transform: scale(1.2);
-}
+/* Banner (Cover Image + Logo) */
 .banner {
     position: relative;
     width: 100%;
-    height: 200px; /* Adjust height */
+    height: 180px; /* Adjusted */
     overflow: hidden;
+    background-color: black; /* Fallback */
 }
 
 .cover {
@@ -59,19 +26,42 @@ footer a img:hover {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* Cover stays behind */
+    z-index: 1;
 }
 
+/* Logo in Top-Left */
 .logo-container {
     position: absolute;
-    top: 10px; /* Moves logo to the top */
-    left: 10px; /* Moves logo to the left */
-    z-index: 2; /* Logo stays in front */
+    top: 10px;
+    left: 15px;
+    z-index: 2;
 }
 
 .logo {
-    width: 80px; /* Adjust size */
+    width: 80px;
     height: auto;
-    border-radius: 50%; /* Optional: Makes it circular */
-    border: 3px solid white; /* Optional: White border */
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+/* YouTube Video */
+.video-container {
+    margin: 20px auto;
+    max-width: 560px;
+}
+
+/* Pinterest Section */
+.pinterest-section {
+    margin: 20px auto;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pinterest-section img {
+    width: 100px;
+    margin-top: 10px;
 }
