@@ -32,3 +32,16 @@ header {
         aspect-ratio: 16/9;
     }
 }
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+footer a img {
+    transition: transform 0.3s ease-in-out;
+}
+
+footer a img:hover {
+    transform: scale(1.2);
+}
