@@ -1,6 +1,13 @@
 // Dark Mode Toggle
-const toggleSwitch = document.getElementById("darkModeToggle");
+const darkModeToggle = document.getElementById("darkModeToggle");
 
-toggleSwitch.addEventListener("change", () => {
+// Check if dark mode was enabled before
+if (localStorage.getItem("darkMode") === "enabled") {
+    document.body.classList.add("dark-mode");
+}
+
+// Toggle dark mode
+darkModeToggle.onclick = () => {
     document.body.classList.toggle("dark-mode");
-});
+    localStorage.setItem("darkMode", document.body.classList.contains("dark-mode") ? "enabled" : "disabled");
+};
