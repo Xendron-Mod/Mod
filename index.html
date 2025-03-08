@@ -1,59 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <button id="dark-mode-toggle">🌙 Dark Mode</button>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XenDron Gaming</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Default Light Mode */
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        /* Header Section */
+        .header {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: url('cover.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        /* Logo Styling */
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: white;
+            padding: 5px;
+        }
+
+        /* Social Media Links */
+        .social-links {
+            margin: 20px;
+        }
+
+        .social-links a {
+            margin: 10px;
+            text-decoration: none;
+            color: blue;
+            font-size: 18px;
+        }
+
+        /* YouTube Video */
+        .video-container {
+            margin: 20px auto;
+            max-width: 560px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+        }
+
+        /* Dark Mode Button */
+        #dark-mode-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 8px 12px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Banner Section (Cover Image + Logo) -->
-    <div class="banner">
-        <img src="cover-image.png" alt="Cover Image" class="cover">
-        <div class="logo-container">
-            <img src="logo.png" alt="Logo" class="logo">
-        </div>
+    <!-- Dark Mode Button -->
+    <button id="dark-mode-toggle">🌙 Dark Mode</button>
+
+    <!-- Header Section -->
+    <div class="header">
+        <img src="logo.png" alt="XenDron Gaming Logo" class="logo">
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="https://www.youtube.com/@XenDron" target="_blank">📺 YouTube</a>
+        <a href="https://www.pinterest.com/XenDronGaming08" target="_blank">📌 Pinterest</a>
     </div>
 
     <!-- YouTube Video -->
-    <h2>My YouTube Video</h2>
     <div class="video-container">
-        <iframe width="315" height="315" 
-            src="https://www.youtube.com/embed/30D3gP4acBU?si=YoYbmcCR9rQOKtUh" 
-            title="YouTube video player" frameborder="0" 
-            allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" allowfullscreen></iframe>
     </div>
 
-    <!-- Pinterest Section -->
-    <div class="pinterest-section">
-        <h2>Follow me on Pinterest</h2>
-        <a href="https://www.pinterest.com/XenDronGaming08/" target="_blank">
-            <img src="pinterest-logo.png" alt="Pinterest Logo">
-        </a>
-    </div>
-
-    <script src="script.js"></script>
+    <!-- Dark Mode Script -->
     <script>
-    const toggleButton = document.getElementById('dark-mode-toggle');
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleButton = document.getElementById('dark-mode-toggle');
 
-    toggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
+            toggleButton.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
 
-        // Save preference in local storage
-        if (document.body.classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark');
-        } else {
-            localStorage.setItem('theme', 'light');
-        }
-    });
+                // Save preference in local storage
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
 
-    // Load saved theme
-    if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-    }
-                                  </script>
+            // Load saved theme
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        });
+    </script>
+
 </body>
 </html>
