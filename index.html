@@ -5,47 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XenDron Gaming</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Header with Cover Image -->
-    <div class="cover">
-        <img src="cover-image.png" alt="XenDron Gaming Cover">
-    </div>
 
-    <!-- Logo Centered Below Cover -->
-    <div class="logo-container">
-        <img src="logo.png" alt="XenDron Logo" class="logo">
-    </div>
-
+<header>
+    <!-- Cover Image (Like YouTube) -->
+    <img src="cover-image.png" alt="XenDron Cover" class="cover">
+    
+    <!-- Logo (Like YouTube) -->
+    <img src="logo.png" alt="XenDron Logo" class="logo">
+    
     <!-- Dark Mode Toggle -->
-    <label class="switch">
-        <input type="checkbox" id="darkModeToggle">
-        <span class="slider"></span>
-    </label>
+    <div class="toggle-container">
+        <img src="sun-moon.png" id="darkModeToggle" class="icon" alt="Dark Mode">
+    </div>
+</header>
 
-    <!-- Main Content -->
-    <main>
-        <h2>Latest Video</h2>
-        <div class="video-container">
-            <iframe width="560" height="315" 
-                src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allowfullscreen>
-            </iframe>
-        </div>
+<div class="content">
+    <h2>Latest Video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    
+    <h3>Follow XenDron Gaming</h3>
+    <div class="social-icons">
+        <a href="https://youtube.com/XenDron_73" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+        <a href="https://pinterest.com/XenDronGaming08" target="_blank"><img src="pinterest.png" alt="Pinterest"></a>
+    </div>
+</div>
 
-        <!-- Social Links -->
-        <h2>Follow XenDron Gaming</h2>
-        <div class="social-links">
-            <a href="https://www.youtube.com/@XenDron_73" target="_blank">
-                <img src="youtube-logo.png" alt="YouTube">
-            </a>
-            <a href="https://www.pinterest.com/XenDronGaming08" target="_blank">
-                <img src="pinterest-logo.png" alt="Pinterest">
-            </a>
-        </div>
-    </main>
+<script src="script.js"></script>
+
 </body>
 </html>
