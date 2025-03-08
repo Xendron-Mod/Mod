@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -5,28 +6,24 @@ body {
     color: #000;
     margin: 0;
     padding: 0;
+    transition: background 0.3s, color 0.3s;
 }
 
+/* Header */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
     background-color: #222;
-    color: white;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
+/* Logo */
+.logo-container .logo {
+    height: 50px;
 }
 
-.logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-}
-
+/* Dark Mode Button */
 #darkModeToggle {
     background: none;
     border: none;
@@ -38,21 +35,29 @@ header {
     height: 30px;
 }
 
-.video-container {
-    margin: 20px auto;
-    max-width: 560px;
+/* Cover Image */
+.cover img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
 }
 
+/* Video Section */
+.video-container {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Social Links */
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 15px;
+    gap: 30px;
+    margin: 20px 0;
 }
 
 .social-links img {
     width: 50px;
-    height: 50px;
     transition: transform 0.2s;
 }
 
@@ -60,13 +65,8 @@ header {
     transform: scale(1.1);
 }
 
+/* Dark Mode Styles */
 .dark-mode {
     background-color: #111;
     color: #fff;
 }
-
-.dark-mode header {
-    background-color: #333;
-}
-
-
