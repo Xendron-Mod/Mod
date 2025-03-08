@@ -1,92 +1,88 @@
-* {
+/* General Styles */
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
     text-align: center;
-    background-color: #f9f9f9;
-    /* Default Light Mode */
-body {
-    background-color: white;
-    color: black;
-    font-family: Arial, sans-serif;
 }
 
-/* Dark Mode */
-.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-/* Button Style */
-#dark-mode-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    padding: 8px 12px;
-    background: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-}
-
-/* Banner (Cover Image + Logo) */
-.banner {
+/* Header Section */
+.header {
     position: relative;
     width: 100%;
-    height: 180px; /* Adjusted */
-    overflow: hidden;
-    background-color: black; /* Fallback */
+    height: 200px;
+    background: black;
 }
 
+/* Cover Image */
 .cover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
 }
 
-/* Logo in Top-Left */
+/* Logo Position */
 .logo-container {
     position: absolute;
-    top: 10px;
-    left: 15px;
-    z-index: 2;
+    bottom: -40px; /* Moves logo below the cover image */
+    left: 20px; /* Aligns it to the left like YouTube */
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
 }
 
 .logo {
     width: 80px;
-    height: auto;
+    height: 80px;
     border-radius: 50%;
-    border: 3px solid white;
+}
+
+/* Video Section */
+.video-container {
+    margin: 60px auto 20px auto;
+    max-width: 560px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.video-container h2 {
+    margin-top: 0;
 }
 
 /* YouTube Video */
-.video-container {
-    margin: 20px auto;
-    max-width: 560px;
+iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
 }
 
-/* Pinterest Section */
-.pinterest-section {
-    margin: 20px auto;
-    padding: 10px;
-    background: white;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 400px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+/* Social Media Links */
+.social-links {
+    margin: 30px 0;
 }
 
-.pinterest-section img {
-    width: 100px;
-    margin-top: 10px;
+.social-links h3 {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.youtube {
+    background: red;
+    color: white;
+}
+
+.pinterest {
+    background: #bd081c;
+    color: white;
 }
