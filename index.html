@@ -4,36 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XenDron Gaming</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-
-    <!-- Header Section -->
-    <header class="header">
-        <img src="cover-image.jpg" alt="Cover Image" class="cover">
+    <header>
         <div class="logo-container">
-            <img src="logo.png" alt="XenDron Gaming Logo" class="logo">
+            <img src="logo.png" alt="XenDron Logo" class="logo">
         </div>
+        <button id="darkModeToggle">
+            <img src="dark-mode-icon.png" alt="Toggle Dark Mode">
+        </button>
     </header>
 
-    <!-- Video Section -->
-    <div class="content">
+    <main>
         <h2>Latest Video</h2>
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" allowfullscreen></iframe>
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allowfullscreen>
+            </iframe>
         </div>
 
-        <!-- Social Media Links -->
+        <h2>Follow XenDron Gaming</h2>
         <div class="social-links">
-            <h3>Follow XenDron Gaming</h3>
-            <a href="https://www.youtube.com/@XenDronGaming08" class="youtube" target="_blank">
-                <img src="youtube-logo.png" alt="YouTube" class="social-icon"> YouTube
+            <a href="https://www.youtube.com/@XenDron" target="_blank">
+                <img src="youtube-logo.png" alt="YouTube">
             </a>
-            <a href="https://www.pinterest.com/XenDronGaming08" class="pinterest" target="_blank">
-                <img src="pinterest-logo.png" alt="Pinterest" class="social-icon"> Pinterest
+            <a href="https://www.pinterest.com/XenDronGaming08" target="_blank">
+                <img src="pinterest-logo.png" alt="Pinterest">
             </a>
         </div>
-    </div>
-
+    </main>
 </body>
 </html>
